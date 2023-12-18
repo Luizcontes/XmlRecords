@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1F2CA208-B6A3-4F62-A930-D6583181953B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>OutSystems.NssXmlRecords</RootNamespace>
+    <AssemblyName>OutSystems.NssXmlRecords</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags />
+    <UpgradeBackupLocation />
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>OutSystems.NssXmlRecords.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <NoWarn>1591;1587</NoWarn>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>OutSystems.NssXmlRecords.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <NoWarn>1591;1587</NoWarn>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="OutSystems.RuntimeCommon">
+      <Name>OutSystems.RuntimeCommon</Name>
+      <HintPath>bin\OutSystems.RuntimeCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OutSystems.HubEdition.RuntimePlatform">
+      <Name>OutSystems.HubEdition.RuntimePlatform</Name>
+      <HintPath>bin\OutSystems.HubEdition.RuntimePlatform.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OutSystems.HubEdition.SMS">
+      <Name>OutSystems.HubEdition.SMS</Name>
+      <HintPath>bin\OutSystems.HubEdition.SMS.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Name>System.Core</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Name>System.Xml.Linq</Name>
+    </Reference>
+    <Reference Include="OutSystems.HubEdition.DatabaseAbstractionLayer">
+      <Name>OutSystems.HubEdition.DatabaseAbstractionLayer</Name>
+      <HintPath>bin\OutSystems.HubEdition.DatabaseAbstractionLayer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OutSystems.REST.API">
+      <Name>OutSystems.REST.API</Name>
+      <HintPath>bin\OutSystems.REST.API.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="OutSystems.SOAP.API">
+      <Name>OutSystems.SOAP.API</Name>
+      <HintPath>bin\OutSystems.SOAP.API.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Test.cs" />
+    <Compile Include="RecordXmlDeserializer.cs" />
+    <Compile Include="RecordXmlSerializer.cs" />
+    <Compile Include="TypeMapper.cs" />
+    <Compile Include="unittests\XmlTest.cs" />
+    <Compile Include="XmlRecords.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Structures.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Records.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecordLists.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XmlSerializerAttributeConfig.cs" />
+    <Compile Include="XmlSerializerConfig.cs" />
+    <Content Include="XmlRecords.csproj">
+      <SubType>Component</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
